@@ -12,19 +12,40 @@ export default function HomePage() {
   return (
     <HomeDiv>
       <h1>Rick & Morty</h1>
-      <button onClick={handleClick("CharactersList")}>Characters</button>
-      <button onClick={handleClick("Search")}>Search</button>
+      <Buttons>
+        <button onClick={handleClick("CharactersList")}>Characters</button>
+        <button onClick={handleClick("Search")}>Search</button>
+      </Buttons>
     </HomeDiv>
   );
 }
 
 const HomeDiv = styled.div`
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  width: 100vw;
+  margin: 0 auto;
 
+  h1 {
+    text-align: center;
+    font-size: xx-large;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+`;
+
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  gap: 3rem;
   button {
-    padding: 20px 60px;
+    font-size: xx-large;
+    padding: 4rem;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    color: black;
+    font-weight: 900;
+    font-family: fantasy;
   }
 `;
